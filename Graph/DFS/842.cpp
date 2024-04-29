@@ -3,13 +3,8 @@
 using namespace std;
 
 int n;
-void f(vector<int> v) {
-    // cout << "f";
 
-    // for (auto e : v) {
-    //     cout << e << " ";
-    // }
-    // cout << endl;
+void f(vector<int> v) {
     if (v.size() == n) {
         for (auto e : v) {
             cout << e << " ";
@@ -17,10 +12,14 @@ void f(vector<int> v) {
         cout << endl;
     }
     for (int i = 1; i <= n; i++) {
+        /*
         if (count(v.begin(), v.end(), i))
             continue;
-        // cout << "i " << i << endl;
-        vector<int> vv = v;
+        */
+
+        if (find(v.begin(), v.end(), i) != v.end())
+            continue;
+        vector<int> vv = v;  // deep copy
         vv.push_back(i);
         f(vv);
     }
