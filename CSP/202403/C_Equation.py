@@ -1,6 +1,8 @@
 """
 1. be careful for isZero()
 2. unit test
+
+need try cpp
 """
 
 n = int(input().strip())
