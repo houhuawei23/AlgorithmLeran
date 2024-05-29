@@ -18,6 +18,7 @@ struct Node {
     int c;
     Node() : t(0), c(0) {}
     Node(int ti, int ci) : t(ti), c(ci) {}
+    /* operator< for sort */
     bool operator<(const Node& other) const {
         if (t != other.t) {
             return t < other.t;
@@ -54,7 +55,7 @@ int main() {
         cin >> t >> c;
         if (auto iter = bigArea.find(t); iter != bigArea.cend()) {
             // found
-            Node& area = (*iter).second;
+            Node& area = iter->second;
             area.c += c;
         } else {
             bigArea[t] = Node(t, c);
@@ -66,7 +67,7 @@ int main() {
         // print_bigArea();
 
         auto iter = bigArea.begin();
-        auto top = (*iter).second; /* copy construct */
+        auto top = iter->second; /* copy construct */
         if (top.c > m or top.t <= k) {
             break;
         }
@@ -76,7 +77,7 @@ int main() {
         top.t -= 1;
         if (auto iter = bigArea.find(top.t); iter != bigArea.cend()) {
             /* found */
-            Node& area = (*iter).second;
+            Node& area = iter->second;
             area.c += top.c;
         } else {
             bigArea[top.t] = top;
@@ -86,7 +87,7 @@ int main() {
 
     // cout << "top: " << endl;
     auto iter = bigArea.begin();
-    top = (*iter).second;
+    top = iter->second;
     // top.print();
     cout << top.t;
 }
