@@ -1,7 +1,8 @@
 # a = map(int, input().split())
 # print(type(a))
 n, m = map(int, input().split())
-dx = 0; dy =0
+dx = 0
+dy = 0
 for i in range(n):
     a, b = map(int, input().split())
     dx += a

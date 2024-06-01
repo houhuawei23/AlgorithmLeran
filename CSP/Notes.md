@@ -1,0 +1,52 @@
+
+
+- No.33
+  - 词频统计: python str, str.lower, in str
+  - 相似度计算: python set, set.intersection, set.union
+  - 化学方程式配平: Gaussian Elimination
+    - python: string parsing
+  - 十滴水: Sim
+  - 文件夹合并
+- No.32
+  - 仓库规划: force traverse
+  - 因子化简: 数论: primes, factoring, qmi
+  - 树上搜索: Tree Traverse, DFS
+    - 模拟: 60
+  - 宝藏
+  - 彩色路径
+- No.31:
+  - 坐标变换1: Simple sim, 平移变换
+  - 坐标变换2: 伸缩 + 旋转变换
+    - Sim: 80
+  - 梯度求解: 符号计算模拟
+    - 后缀表达式计算, stack
+  - 阴阳龙: 模拟? + 优化
+  - 阻击
+- No.30
+  - 重复局面: sim
+  - 矩阵运算: sim matrix calc
+    - reverse/ Matrix multiplication/ dot
+    - python: TLE 70
+  - 解压缩: Big Sim?
+  - 电力网络
+  - 闪耀巡航
+- No.29
+  - 田地丈量: Rectangle Intersection Area Calculation
+    - 观察-洞察 数量关系
+  - 垦田计划: 优先级队列 priority_queue
+    - Sim + Greedy: 70
+    - Opt: 合并相同剩余天数的田地, map (has order, use descending)
+  - LDAP: Big Sim
+  - 星际网络II
+  - 施肥
+- No.27
+  - 如此编码:
+    - 数论: 整除运算, 取余
+    - 模拟
+  - 何以包邮？
+    - Bag 01
+    - 形式化问题, 将此问题转换成 标准01背包问题
+    - 定义并推导此问题的状态转移方程
+  - 防疫大数据
+  - 吉祥物投票
+  - 高维亚空间超频物质变压缩技术
