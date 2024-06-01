@@ -2,9 +2,10 @@
 using namespace std;
 typedef unsigned long long int uLL;
 
-const int N = 1e5 + 10;
+// const uLL N = 1e5 + 10;
+const uLL MAXN = 1e10 + 10;
 
-vector<int> primes;
+vector<uLL> primes;
 vector<uLL> results;
 
 uLL calc(uLL n, int k);
@@ -13,7 +14,7 @@ int main() {
     // cout << N << endl;
     // preprocess
 
-    for (int i = 2; i * i < N; i++) {
+    for (uLL i = 2; i * i< MAXN; i++) {
         bool is_prime = true;
         for (auto p : primes) {
             // if (i * p >= N) break;
@@ -27,6 +28,11 @@ int main() {
             // cout << i << endl;
         }
     }
+    // cout << "primes: \n";
+    // for (auto p : primes) {
+    //     cout << p << " ";
+    // }
+    // cout << endl;
     // calc(2155895064, 3);
     int q;
     long long int n, k;

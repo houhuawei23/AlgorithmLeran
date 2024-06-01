@@ -20,6 +20,7 @@ for i in range(2, MAXN):
 # print(primes)
 nums = len(primes)
 
+print(primes)
 
 def cal(n, k):
     res = 1
