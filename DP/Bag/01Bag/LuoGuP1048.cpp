@@ -1,3 +1,6 @@
+/*
+https://www.luogu.com.cn/problem/P1048
+*/
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -15,8 +18,13 @@ int main() {
         int t, w;
         cin >> t >> w;
         for (int j = 1; j <= T; j++) {
-            dp[i][j] =
-                j < t ? dp[i - 1][j] : max(dp[i - 1][j], dp[i - 1][j - t] + w);
+            if (j < t)
+                dp[i][j] = dp[i - 1][j];
+            else
+                dp[i][j] = max(dp[i - 1][j], dp[i - 1][j - t] + w);
+            // dp[i][j] =
+            //     j < t ? dp[i - 1][j] : max(dp[i - 1][j], dp[i - 1][j - t] +
+            //     w);
         }
     }
     cout << dp[M][T];

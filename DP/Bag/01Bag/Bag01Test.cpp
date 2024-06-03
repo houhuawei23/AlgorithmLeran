@@ -25,7 +25,12 @@ int main() {
     for (int i = 1; i <= N; i++) {
         cin >> v >> w;
         for (int j = 1; j <= V; j++) {
-            dp[i][j] = j < v ? dp[i - 1][j] : max(dp[i-1][j], dp[i - 1][j - v] + w);
+            if (j < v)
+                dp[i][j] = dp[i - 1][j];
+            else
+                dp[i][j] = max(dp[i - 1][j], dp[i - 1][j - v] + w);
+            // dp[i][j] = j < v ? dp[i - 1][j] : max(dp[i-1][j], dp[i - 1][j -
+            // v] + w);
         }
     }
     print_dp();

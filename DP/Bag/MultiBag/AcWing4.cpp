@@ -1,3 +1,13 @@
+/*
+Multi Bag.
+https://www.acwing.com/problem/content/4/
+
+0 < N, V <= 100
+0 < vi,wi,si <= 100
+
+O(N*V*K) = 1e(2+2+2) = 1e6
+*/
+
 #include <bits/stdc++.h>
 
 using namespace std;

@@ -22,15 +22,15 @@ int main() {
     cin >> N >> V;
 
     // init dp
-    for(int j =1; j<=V; j++) {
+    for (int j = 1; j <= V; j++) {
         dp[0][j] = INT32_MIN;
     }
-
 
     for (int i = 1; i <= N; i++) {
         cin >> v >> w;
         for (int j = 1; j <= V; j++) {
-            dp[i][j] = j < v ? dp[i - 1][j] : max(dp[i-1][j], dp[i - 1][j - v] + w);
+            dp[i][j] =
+                j < v ? dp[i - 1][j] : max(dp[i - 1][j], dp[i - 1][j - v] + w);
         }
     }
     print_dp();

@@ -43,29 +43,30 @@ using namespace std;
 
 const int NMAX = 1005;
 
-int Ws[NMAX]; // 价值
-int Cs[NMAX]; // 体积
+int Ws[NMAX];  // 价值
+int Cs[NMAX];  // 体积
 int f[NMAX];
 
-int main(){
-    int CNT; cin >> CNT;
+int main() {
+    int CNT;
+    cin >> CNT;
     int n, c;
-    while(CNT--){
+    while (CNT--) {
         cin >> n >> c;
         for (int i = 1; i <= n; i++) {
             cin >> Ws[i];
         }
-        for (int i = 1; i<=n; i++) {
+        for (int i = 1; i <= n; i++) {
             cin >> Cs[i];
         }
         memset(f, 0, sizeof(f));
 
-        for (int i=1; i<=n; i++){
-            for(int j=c; j>=Cs[i]; j--){ 
-                f[j] = max(f[j], f[j-Cs[i]] + Ws[i]);
+        for (int i = 1; i <= n; i++) {
+            for (int j = c; j >= Cs[i]; j--) {
+                f[j] = max(f[j], f[j - Cs[i]] + Ws[i]);
             }
         }
         cout << f[c] << endl;
     }
-
 }
+
