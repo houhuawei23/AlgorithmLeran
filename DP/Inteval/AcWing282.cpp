@@ -2,6 +2,9 @@
 Merge Stones.
 https://www.acwing.com/problem/content/284/
 Interval DP.
+
+两两合并, 找出总合并代价最小的方案, 输出最小代价.
+
 输入样例：
 4
 1 3 5 2
@@ -59,7 +62,8 @@ calc:
     dpij = min(dp[i][k] +  dp[k+1][j]) + sum(stones[i~j]),
         for all k in [i...j-1]
 init dp:
-    dp[i] = stones[i] for all i in [1...N]
+    dp[i][i] = 0 for all i in [1...N]
+    else dp[i][j] = INF;
 */
 int solve() {
     /* init */

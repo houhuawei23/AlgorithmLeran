@@ -2,6 +2,8 @@
 Longest Ascending SubSequence.
 https://www.acwing.com/problem/content/897/
 
+DP N = 1e3
+O(N^2)
 */
 #include <bits/stdc++.h>
 using namespace std;
