@@ -40,9 +40,10 @@ void print_dp() {
 /*
 f[i][j]: a[1~i] -> b[1~j] minimal operation number
 由于对字符串的操作顺序可以交换的,
-所以不妨假定我们转换的操作序列的最后一步都是对a的最后一个字符进行的操作
+所以不妨假定我们转换的操作序列的最后一步都是对 a 的最后一个字符进行的操作
 则考察 a[i] 与 b[j]
-- if a[i] == b[j], then only need to convert a[1~(i-1)] to b[1~(j-1)]
+- if a[i] == b[j]
+    - only need to convert a[1~(i-1)] to b[1~(j-1)]
     - opnum = f[i-1][j-1]
 - else:
     - if last operation is delete a[i]:
