@@ -1,26 +1,25 @@
 /*
-多源汇最短路问题-具有多个源点
+https://www.acwing.com/problem/content/856/
+多源汇最短路, 重边-自环-负权
+n m k
+x y z * m
+x y * k
 
-Floyd算法 O(n^3)-动态规划
+n <= 200
+k <= n^2 <= 4e4
+m <= 2e4
+abs(w) <= 1e4
+if SPFA: n*m*k = 200 * 2e4 * 4e4 = 1.6e11 (TLE)
+use Floyd: DP
+    d[i][j] = min(d[i][j], d[i][k] + d[k][j])
 
-给定一个n个点m条边的有向图，图中可能存在重边和自环，边权可能为负数。
-
-再给定k个询问，每个询问包含两个整数x和y，表示查询从点x到点y的最短距离，如果路径不存在，则输出“impossible”。
-
-数据保证图中不存在负权回路。
-
-作者：郡呈
-链接：https://www.acwing.com/solution/content/6976/
-来源：AcWing
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 */
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
-
-const int N = 210, M = 2e+10, INF = 1e9;
-
-int n, m, k, x, y, z;
+const int N = 210;
+const int INF = 0x3f3f3f3f;
 int d[N][N];
+int n, m, k;
 
 void floyd() {
     for(int k = 1; k <= n; k++)
@@ -38,17 +37,33 @@ int main() {
             else
                 d[i][j] = INF;
     while(m--) {
+        int x, y, z;
         cin >> x >> y >> z;
+        /* keep min edge */
         d[x][y] = min(d[x][y], z);
-        // 注意保存最小的边
     }
     floyd();
     while(k--) {
+        int x, y;
         cin >> x >> y;
-        if(d[x][y] > INF / 2) puts("impossible");
-        // 由于有负权边存在所以约大过INF/2也很合理
-        else
+        if(d[x][y] > INF / 2) {
+            cout << "impossible" << endl;
+        } else {
             cout << d[x][y] << endl;
+        }
     }
-    return 0;
 }
+
+/*
+输入样例：
+3 3 2
+1 2 1
+2 3 2
+1 3 1
+2 1
+1 3
+输出样例：
+impossible
+1
+
+*/

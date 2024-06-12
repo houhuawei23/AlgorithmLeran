@@ -25,7 +25,7 @@ const int INFINT = 0x3f3f3f3f;
 
 int firstEdge[N], endPoint[N], nextEdge[N], weight[N], idx;
 int dist[N];
-bool st[N];
+bool st[N]; /* true is determined */
 
 int n, m;
 void add(int a, int b, int c) {
