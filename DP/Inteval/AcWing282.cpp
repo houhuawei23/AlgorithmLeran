@@ -1,10 +1,11 @@
 /*
-Merge Stones.
+Merge Stones. 石子合并
 https://www.acwing.com/problem/content/284/
 Interval DP.
 
 两两合并, 找出总合并代价最小的方案, 输出最小代价.
 
+ N <= 300
 输入样例：
 4
 1 3 5 2
