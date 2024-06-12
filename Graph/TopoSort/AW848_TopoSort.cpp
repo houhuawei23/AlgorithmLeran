@@ -33,7 +33,8 @@ vector<int> res;
 bool topSort() {
     queue<int> q;
     for(int i = 1; i <= n; i++) {
-        if(in[i] == 0) q.push(i);
+        if(in[i] == 0)
+            q.push(i);
     }
     while(q.size()) {
         auto cur = q.front();
@@ -42,7 +43,8 @@ bool topSort() {
         for(int edge = h[cur]; edge != -1; edge = ne[edge]) {
             auto end = e[edge];
             in[end]--;
-            if(in[end] == 0) q.push(end);
+            if(in[end] == 0)
+                q.push(end);
         }
     }
     return res.size() == n;

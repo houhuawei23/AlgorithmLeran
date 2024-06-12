@@ -48,3 +48,20 @@
 链接：https://www.acwing.com/solution/content/6976/
 来源：AcWing
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+
+## 最小生成树
+
+- Prime
+  - 朴素版: 稠密图, O(n^2)
+  - 堆优化: 稀疏图, O(m logn)
+- Kruskal, O(m logm)
+
+算法选择: 
+- 稠密图: 朴素版Prime
+- 稀疏图: Kruskal, 比堆优化版 Prime 更清晰
+
+## 二分图
+
+- 判别: 染色法, 深度优先 O(n + m)
+- 求最大匹配: 匈牙利算法 O(mn), 实际运行时间远小于 O(mn)
