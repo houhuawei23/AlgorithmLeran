@@ -35,9 +35,7 @@ int n, m;
 int p[N]; /* for 并查集 */
 
 int find(int x) {
-    if(p[x] != x) {
-        p[x] = find(p[x]);
-    }
+    if(p[x] != x) { p[x] = find(p[x]); }
     return p[x];
 }
 struct Edge {
@@ -47,8 +45,7 @@ struct Edge {
 
 int kruskal() {
     sort(edges, edges + m);
-    for(int i = 1; i <= n; i++)
-        p[i] = i;
+    for(int i = 1; i <= n; i++) p[i] = i;
     int res = 0; /* weight sum of SMT */
     int cnt = 0; /* edges in the tree */
     for(int i = 0; i < m; i++) {
