@@ -1,4 +1,5 @@
 并查集 Disjoint-set
+- [oi-wiki](https://oi-wiki.org/ds/dsu/)
 - 每个集合用一棵树来表示, 树根的编号就是整个集合的编号
 - 每个结点存储其父结点 `p[x]`
 - 判断树根: `p[x] == x`
@@ -16,3 +17,9 @@
 - 复杂拓展
   - 可持久化并查集
   - 可撤销并查集
+  [Almost Union-Find](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=229&page=show_problem&problem=3138)
+
+### 树状数组 Binary Indexed Tree
+[oi-wiki: Binary Indexed Tree](https://oi-wiki.org/ds/fenwick/)
+[wikipedia: Fenwick_tree](https://en.wikipedia.org/wiki/Fenwick_tree)
+[五分钟丝滑动画讲解 | 树状数组](https://www.bilibili.com/video/BV1ce411u7qP/)
