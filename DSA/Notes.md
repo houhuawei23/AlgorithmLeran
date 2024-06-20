@@ -23,3 +23,18 @@
 [oi-wiki: Binary Indexed Tree](https://oi-wiki.org/ds/fenwick/)
 [wikipedia: Fenwick_tree](https://en.wikipedia.org/wiki/Fenwick_tree)
 [五分钟丝滑动画讲解 | 树状数组](https://www.bilibili.com/video/BV1ce411u7qP/)
+
+- 单点修改, 区间查询 (基础)
+- 区间修改, 单点查询: 查分数组
+- 区间修改, 区间查询: 二阶树状数组
+- 二维区间修改 + 区间查询
+- 偏序问题(逆序对 + 离散化)
+- 区间最值
+- 离线处理: 读取所有查询, 统一处理, 统一输出
+
+### 线段树 Segment Tree
+
+- 分治 + 二叉树 + Lazy-Tag
+- 大区间的解可通过小区间的解合并而得
+- 单点修改 + 区间查询 (Base) 
+- 区间修改 + 区间查询 (Lazy-Tag): LuoGu P3372
