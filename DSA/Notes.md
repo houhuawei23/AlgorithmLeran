@@ -1,4 +1,4 @@
-并查集 Disjoint-set
+### 并查集 Disjoint-set
 - [oi-wiki](https://oi-wiki.org/ds/dsu/)
 - 每个集合用一棵树来表示, 树根的编号就是整个集合的编号
 - 每个结点存储其父结点 `p[x]`
@@ -20,9 +20,9 @@
   [Almost Union-Find](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=229&page=show_problem&problem=3138)
 
 ### 树状数组 Binary Indexed Tree
-[oi-wiki: Binary Indexed Tree](https://oi-wiki.org/ds/fenwick/)
-[wikipedia: Fenwick_tree](https://en.wikipedia.org/wiki/Fenwick_tree)
-[五分钟丝滑动画讲解 | 树状数组](https://www.bilibili.com/video/BV1ce411u7qP/)
+- [oi-wiki: Binary Indexed Tree](https://oi-wiki.org/ds/fenwick/)
+- [wikipedia: Fenwick_tree](https://en.wikipedia.org/wiki/Fenwick_tree)
+- [五分钟丝滑动画讲解 | 树状数组](https://www.bilibili.com/video/BV1ce411u7qP/)
 
 - 单点修改, 区间查询 (基础)
 - 区间修改, 单点查询: 查分数组
@@ -33,7 +33,10 @@
 - 离线处理: 读取所有查询, 统一处理, 统一输出
 
 ### 线段树 Segment Tree
-
+- [wikipedia:Segment Tree](https://en.wikipedia.org/wiki/Segment_tree)
+- [CF: SegTree](https://codeforces.com/blog/entry/57319)
+- [usaco](https://usaco.guide/adv/segtree-beats?lang=cpp)
+- [hackerearth](https://www.hackerearth.com/practice/data-structures/advanced-data-structures/segment-trees/tutorial/)
 - 分治 + 二叉树 + Lazy-Tag
 - 大区间的解可通过小区间的解合并而得
 - 单点修改 + 区间查询 (Base) 

@@ -11,3 +11,6 @@
 - [algorithm](https://niyunsheng.gitbook.io/algorithm)
   
 - [代码随想录](https://programmercarl.com/)
+- [Algorithms for Competitive Programming](https://cp-algorithms.com/index.html)
+- [Algorithmica](https://en.algorithmica.org/)
+- [usaco](https://usaco.guide/dashboard/)

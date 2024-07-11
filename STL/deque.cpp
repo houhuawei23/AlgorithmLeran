@@ -138,8 +138,7 @@ using namespace std;
 
 void showdq(deque<int> g) {
     deque<int>::iterator it;
-    for (it = g.begin(); it != g.end(); ++it)
-        cout << '\t' << *it;
+    for(it = g.begin(); it != g.end(); ++it) cout << '\t' << *it;
     cout << '\n';
 }
 
@@ -173,7 +172,7 @@ int tryDeque() {
 void test_deque_member_functions() {
     // operator=
     {
-        std::deque<int> d1 = {1, 2, 3};
+        std::deque<int> d1 = { 1, 2, 3 };
         std::deque<int> d2;
         d2 = d1;
         assert(d2 == d1);
@@ -207,7 +206,7 @@ void test_deque_member_functions() {
 }
 
 void test_deque_element_access() {
-    std::deque<int> d = {1, 2, 3, 4, 5};
+    std::deque<int> d = { 1, 2, 3, 4, 5 };
 
     // at
     assert(d.at(2) == 3);
@@ -223,7 +222,7 @@ void test_deque_element_access() {
 }
 
 void test_deque_iterators() {
-    std::deque<int> d = {1, 2, 3, 4, 5};
+    std::deque<int> d = { 1, 2, 3, 4, 5 };
 
     // begin, cbegin (C++11)
     assert(*d.begin() == 1);
@@ -261,7 +260,7 @@ void test_deque_capacity() {
 }
 
 void test_deque_modifiers() {
-    std::deque<int> d = {1, 2, 3, 4, 5};
+    std::deque<int> d = { 1, 2, 3, 4, 5 };
 
     // clear
     d.clear();
@@ -325,7 +324,7 @@ void test_deque_modifiers() {
     assert(d.size() == 10);
 
     // swap
-    std::deque<int> d3 = {1, 2, 3};
+    std::deque<int> d3 = { 1, 2, 3 };
     d.swap(d3);
     assert(d.size() == 3 && d3.size() == 10);
 }
@@ -333,14 +332,14 @@ void test_deque_modifiers() {
 void test_modifiers() {
     // clear
     {
-        std::deque<int> d = {1, 2, 3, 4, 5};
+        std::deque<int> d = { 1, 2, 3, 4, 5 };
         d.clear();
         assert(d.empty());
     }
 
     // insert
     {
-        std::deque<int> d = {1, 2, 3, 5};
+        std::deque<int> d = { 1, 2, 3, 5 };
         d.insert(d.begin() + 3, 4);
         assert(d[3] == 4);
     }
@@ -355,16 +354,16 @@ void test_modifiers() {
 
     // emplace
     {
-        std::deque<int> d = {1, 2, 4};
+        std::deque<int> d = { 1, 2, 4 };
         d.emplace(d.begin() + 2, 3);
         assert(d[2] == 3);
     }
 
     // erase
     {
-        std::deque<int> d = {1, 2, 3, 4, 5};
+        std::deque<int> d = { 1, 2, 3, 4, 5 };
         d.erase(d.begin() + 1);
-        assert(d == std::deque<int>({1, 3, 4, 5}));
+        assert(d == std::deque<int>({ 1, 3, 4, 5 }));
     }
 
     // push_back
@@ -383,7 +382,7 @@ void test_modifiers() {
 
     // pop_back
     {
-        std::deque<int> d = {1, 2, 3, 4, 5};
+        std::deque<int> d = { 1, 2, 3, 4, 5 };
         d.pop_back();
         assert(d.back() == 4);
     }
@@ -403,14 +402,14 @@ void test_modifiers() {
 
     // pop_front
     {
-        std::deque<int> d = {1, 2, 3, 4, 5};
+        std::deque<int> d = { 1, 2, 3, 4, 5 };
         d.pop_front();
         assert(d.front() == 2);
     }
 
     // resize
     {
-        std::deque<int> d = {1, 2, 3, 4, 5};
+        std::deque<int> d = { 1, 2, 3, 4, 5 };
         d.resize(10, 100);
         assert(d.size() == 10);
         assert(d.back() == 100);
@@ -418,11 +417,11 @@ void test_modifiers() {
 
     // swap
     {
-        std::deque<int> d1 = {1, 2, 3};
-        std::deque<int> d2 = {4, 5, 6};
+        std::deque<int> d1 = { 1, 2, 3 };
+        std::deque<int> d2 = { 4, 5, 6 };
         d1.swap(d2);
-        assert(d1 == (std::deque<int>{4, 5, 6}));
-        assert(d2 == (std::deque<int>{1, 2, 3}));
+        assert(d1 == (std::deque<int>{ 4, 5, 6 }));
+        assert(d2 == (std::deque<int>{ 1, 2, 3 }));
     }
 }
 int main() {
